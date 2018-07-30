@@ -10,6 +10,9 @@ public class BotRunner {
     @Autowired
     private BotHandler botHandler;
 
+    /**
+     * Запуск бота
+     */
     @Autowired
     public void runBot() {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();

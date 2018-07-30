@@ -20,6 +20,10 @@ public class BotHandler extends TelegramLongPollingBot {
     @Value("${telegram.bot.token}")
     private String botToken;
 
+    /**
+     * Обработка принятого сообщения
+     * @param update принятое сообщение
+     */
     public void onUpdateReceived(Update update) {
         Message recievedMessage = update.getMessage();
         if (update.hasMessage() && recievedMessage.hasText()) {
@@ -68,10 +72,18 @@ public class BotHandler extends TelegramLongPollingBot {
         }
     }
 
+    /**
+     * Получить имя бота
+     * @return имя бота
+     */
     public String getBotUsername() {
         return botUserName;
     }
 
+    /**
+     * Получить токен бота
+     * @return токен
+     */
     public String getBotToken() {
         return botToken;
     }
